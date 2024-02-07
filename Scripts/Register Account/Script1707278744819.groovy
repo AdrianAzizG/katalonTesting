@@ -26,13 +26,13 @@ WebUI.click(findTestObject('Object Repository/Record/Register Account/Page_XYZ B
 WebUI.click(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/button_Add Customer'))
 
 WebUI.setText(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/input_First Name_form-control ng-pristine n_693e51'), 
-    'Bank')
+    firstName)
 
 WebUI.setText(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/input_Last Name_form-control ng-pristine ng_929604'), 
-    'Raya')
+    lastName)
 
 WebUI.setText(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/input_Post Code_form-control ng-pristine ng_b8fd27'), 
-    '1129')
+    postCode)
 
 WebUI.click(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/button_Add Customer_1'))
 
@@ -48,6 +48,9 @@ WebUI.click(findTestObject('Object Repository/Record/Register Account/Page_XYZ B
 
 WebUI.click(findTestObject('Object Repository/Record/Register Account/Page_XYZ Bank/button_Customers'))
 
-WebUI.verifyTextPresent('Bank', false)
-WebUI.verifyTextPresent('Raya', false)
-WebUI.verifyTextPresent('1129', false)
+WebUI.verifyTextPresent(firstName, false)
+
+WebUI.verifyTextPresent(lastName, false)
+
+WebUI.verifyTextPresent(postCode, false)
+
